@@ -2,7 +2,7 @@ import pygame
 from circleshape import CircleShape
 from constants import SHOOT_RADIUS
 
-class Shoot(CircleShape):
+class Projectile(CircleShape):
     def __init__(self, x, y):
         super().__init__(x, y, SHOOT_RADIUS)
 

@@ -1,7 +1,7 @@
 import pygame
 from constants import *
 from circleshape import CircleShape
-from shoot import Shoot
+from shoot import Projectile
 
 class Player(CircleShape):
     def __init__(self, x, y):
@@ -37,7 +37,7 @@ class Player(CircleShape):
         if(self.timer > 0):
             return     # weapon is on cooldown, can't shoot
 
-        shoot = Shoot(self.position.x, self.position.y)
+        shoot = Projectile(self.position.x, self.position.y)
         shoot.velocity = pygame.Vector2(0, 1).rotate(self.rotation) * PLAYER_SHOOT_SPEED
         self.timer = PLAYER_SHOOT_COOLDOWN
     
